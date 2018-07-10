@@ -1,3 +1,8 @@
+/**************************
+* Variables and data types
+*/
+
+/*
 var firstName = 'John';
 console.log(firstName);
 
@@ -12,4 +17,29 @@ console.log(job);
 
 job = 'Teacher';
 console.log(job);
- 
+*/
+
+/**************************
+* Variable mutation and type corection
+*/
+
+var firstName = 'John';
+var age = 28;
+
+console.log(firstName + ' ' + age);
+
+var job, isMarried;
+job = 'Teacher';
+isMarried = false;
+
+console.log(firstName + ' is a ' + age + ' years old ' + job + '. Is he married? ' + isMarried);
+
+// Variable mutation
+
+age = 'twenty eight';
+job = 'driver';
+
+alert(firstName + ' is a ' + age + ' years old ' + job + '. Is he married? ' + isMarried);
+
+var lastName = prompt('What is his last name?');
+console.log(firstName + ' ' + lastName);
