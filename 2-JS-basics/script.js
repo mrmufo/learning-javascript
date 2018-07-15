@@ -49,6 +49,7 @@ console.log(firstName + ' ' + lastName);
 /**************************
 * Basic operators
 */
+/*
 var year, yearJohn, yearMark;
 year = 2018;
 ageJohn = 28;
@@ -72,3 +73,51 @@ console.log(typeof ageJohn);
 console.log(typeof 'Mark is older than John');
 var x;
 console.log(typeof x);
+*/
+/**************************
+* Operator precendence
+*/
+
+/*
+var now = 2018;
+var yearJohn = 1989;
+var fullAge = 18;
+
+// Multiple operators
+var isFullAge = now - yearJohn >= fullAge; // true
+console.log(isFullAge);
+
+// Grouping
+var ageJohn = now - yearJohn;
+var ageMark = 35;
+var average = (ageJohn + ageMark) / 2;
+console.log(average);
+
+// Multiple assignments
+var x, y;
+x = y = (3 + 5) * 4 - 6;
+console.log(x, y);
+
+// More operators
+x *= 2;
+console.log(x);
+x += 10;
+console.log(x);
+x++;
+console.log(x);
+*/
+
+/**************************
+* Challenge
+*/
+
+var massMark = 80;
+var heightMark = 1.83;
+var massJohn = 72;
+var heightJohn = 1.73;
+var bmiMark = massMark / (heightMark * heightMark);
+var bmiJohn = massJohn / (heightJohn * heightJohn);
+var isHigher = bmiMark > bmiJohn;
+console.log('Mark\' BMI: ' + bmiMark);
+console.log('John\' BMI: ' + bmiJohn);
+console.log('Is Mark\'s BMI higher?' + isHigher);
