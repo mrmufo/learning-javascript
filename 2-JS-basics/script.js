@@ -230,6 +230,7 @@ switch(true) {
 // falsy: undefined, null, 0, '', NaN
 // truthy: NOT falsy values
 
+/*
 var height;
 
 height = 23;
@@ -245,9 +246,38 @@ if (height || height === 0) {
 if (height == '23') {
     console.log('The == operator does type coercion!');
 }
-        
-    
-    
+*/
+
+/**************************
+* Challenge 2
+*/
+var averageTeamJohn = 86 + 120 + 133;
+var averageTeamMike = 116 + 94 + 123;
+var averageTeamMary = 97 + 134 + 102;
+
+/*
+if (averageTeamJohn > averageTeamMike) {
+    console.log('John\'s team won with the average of ' + averageTeamJohn + ' > ' + averageTeamMike);
+} else if (averageTeamJohn < averageTeamMike) {
+    console.log('Mike\'s team won with the average of ' + averageTeamMike + ' > ' + averageTeamJohn);
+} else {
+    console.log('Draw!');
+}
+*/
+
+if (averageTeamJohn > averageTeamMike && averageTeamJohn > averageTeamMary) {
+    console.log('John\'s team won with the average of ' + averageTeamJohn + ' > ' + averageTeamMike + ', ' + averageTeamMary);
+} else if (averageTeamMike > averageTeamJohn && averageTeamMike > averageTeamMary) {
+    console.log('Mike\'s team won with the average of ' + averageTeamMike + ' > ' + averageTeamJohn + ', ' + averageTeamMary);
+} else if (averageTeamMary > averageTeamJohn && averageTeamMary > averageTeamMike) {
+    console.log('Mary\'s team won with the average of ' + averageTeamMary + ' > ' + averageTeamJohn + ', ' + averageTeamMike);
+} else if (averageTeamJohn === averageTeamMike) {
+    console.log('Draw ' + averageTeamJohn);
+} else if (averageTeamJohn === averageTeamMary) {
+    console.log('Draw ' + averageTeamJohn);
+} else {
+    console.log('Draw ' + averageTeamMike);
+}
 
 
 
