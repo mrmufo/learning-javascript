@@ -110,7 +110,7 @@ console.log(x);
 /**************************
 * Challenge
 */
-
+/*
 var massMark = 80;
 var heightMark = 1.83;
 var massJohn = 72;
@@ -118,6 +118,79 @@ var heightJohn = 1.73;
 var bmiMark = massMark / (heightMark * heightMark);
 var bmiJohn = massJohn / (heightJohn * heightJohn);
 var isHigher = bmiMark > bmiJohn;
-console.log('Mark\' BMI: ' + bmiMark);
-console.log('John\' BMI: ' + bmiJohn);
+console.log('Mark\'s BMI: ' + bmiMark);
+console.log('John\'s BMI: ' + bmiJohn);
 console.log('Is Mark\'s BMI higher?' + isHigher);
+*/
+
+/**************************
+* If/else statements
+*/
+
+var firstName = 'John';
+var civilStatus = 'single';
+
+if (civilStatus === 'married') {
+    console.log(firstName + ' is married!');
+} else {
+    console.log(firstName + ' isn\'t married yet');
+}
+
+var isMarried = false;
+
+if (isMarried === true) {
+    console.log(firstName + ' is married!');
+} else {
+    console.log(firstName + ' isn\'t married yet');
+}
+
+var massMark = 80;
+var heightMark = 1.83;
+
+var massJohn = 76;
+var heightJohn = 1.73;
+
+var bmiMark = massMark / (heightMark * heightMark);
+var bmiJohn = massJohn / (heightJohn * heightJohn);
+if (bmiMark > bmiJohn) {
+    console.log('Mark\'s BMI is higher: ' + bmiMark + ' > ' + bmiJohn);
+} else {
+    console.log('John\'s BMI is higher: ' + bmiJohn + ' > '+ bmiMark);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
