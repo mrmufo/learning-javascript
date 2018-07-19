@@ -376,6 +376,7 @@ console.log(isDesigner);
 * Challenge 3
 */
 
+/*
 var bills = [124, 48, 268];
 
 var calculateTip = function(bill) {
@@ -393,6 +394,54 @@ var calculateTip = function(bill) {
 var tips = [calculateTip(bills[0]), calculateTip(bills[1]), calculateTip(bills[2])];
 var amountPaid = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(tips, amountPaid);
+*/
+
+/**************************
+* Objects and properties
+*/
+
+// Object literal
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+// New object syntax
+var jane = new Object();
+jane.firstName = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
