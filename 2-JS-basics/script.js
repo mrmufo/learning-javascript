@@ -504,7 +504,7 @@ while (i < john.length) {
     console.log(john[i]);
     i++;
 }
-*/
+
 // continue and break statements
 var john= ['John', 'Smith', 1990, 'designer', false];
 
@@ -522,13 +522,72 @@ for (var i = 0; i < john.length; i++) {
 for (var i = john.length-1; i >= 0; i--) {
     console.log(john[i]);
 }
+*/
 
+/**************************
+* Challenge 5
+*/
 
+var johnBillsAndTips = {
+    bills: [124, 48, 268, 180, 42],
+    tips: [],
+    btTogether: [],
+    countTips: function() {
+        for (var i = 0; i < this.bills.length; i++) {
+            if (this.bills[i] < 50) this.tips[i] = this.bills[i] * 0.2;
+            if (this.bills[i] >= 50 && this.bills[i] < 200) this.tips[i] = this.bills[i] * 0.15;
+            if (this.bills[i] >= 200) this.tips[i] = this.bills[i] * 0.1;
+            this.btTogether[i] = this.bills[i] + this.tips[i];
+        }
+    },
+    results: function() {
+        console.log('John\'s bills and tips:');
+        var i = 0;
+        while (i < this.bills.length) {
+            console.log(this.btTogether[i]);
+            i++;
+        }
+    }
+};
 
+var markBillsAndTips = {
+    bills: [77, 375, 110, 45],
+    tips: [],
+    btTogether: [],
+    countTips: function() {
+        for (var i = 0; i < this.bills.length; i++) {
+            if (this.bills[i] < 100) this.tips[i] = this.bills[i] * 0.2;
+            if (this.bills[i] >= 100 && this.bills[i] < 300) this.tips[i] = this.bills[i] * 0.10;
+            if (this.bills[i] >= 300) this.tips[i] = this.bills[i] * 0.25;
+            this.btTogether[i] = this.bills[i] + this.tips[i];
+        }
+    },
+    results: function() {
+        console.log('Mark\'s bills and tips:');
+        var i = 0;
+        while (i < this.bills.length) {
+            console.log(this.btTogether[i]);
+            i++;
+        }
+    }
+};
 
+johnBillsAndTips.countTips();
+johnBillsAndTips.results();
+markBillsAndTips.countTips();
+markBillsAndTips.results();
 
+var calcAverageTip = function(tips) {
+    var sum = 0;
+    var i = 0;
+    for (i = 0; i < tips.length; i++) {
+        sum += tips[i];
+    }
+    console.log('Average tip: ' + sum/i);
+}
 
-
+calcAverageTip(johnBillsAndTips.btTogether);
+calcAverageTip(markBillsAndTips.btTogether);
 
 
 
