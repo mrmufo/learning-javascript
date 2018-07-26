@@ -579,17 +579,20 @@ markBillsAndTips.results();
 
 var calcAverageTip = function(tips) {
     var sum = 0;
-    var i = 0;
-    for (i = 0; i < tips.length; i++) {
+    for (var i = 0; i < tips.length; i++) {
         sum += tips[i];
     }
-    console.log('Average tip: ' + sum/i);
+    return sum/tips.length;
 }
 
-calcAverageTip(johnBillsAndTips.btTogether);
-calcAverageTip(markBillsAndTips.btTogether);
+var johnAvTip = calcAverageTip(johnBillsAndTips.tips);
+var markAvTip = calcAverageTip(markBillsAndTips.tips);
 
-
+if (johnAvTip > markAvTip) {
+    console.log('John\'s family gives more tips. Average tip: £' + johnAvTip + ' > £' + markAvTip)
+} else if (johnAvTip < markAvTip) {
+    console.log('Mark\'s family gives more tips. Average tip: £' + markAvTip + ' > £' + johnAvTip)
+} else console.log('Both families average tip is the same: £' + johnAvTip);
 
 
 
